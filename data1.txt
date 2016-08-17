@@ -1,0 +1,23 @@
+T789RT:TV:789.59:221:3
+Bruce Anderson;Milpitas;EZ123;12
+Frys;Sunnyvale;AC349;150
+Kate Willis;LA;EZ901;33
+AB39ZX:Hard Drive:69.99:200:0
+D2781XY:DVD Player:129.95:35:0
+GA1337S:Computer Monitor:159.99:89:0
+C239SD:Camcoder:395.99:50:2
+John Adams;San Jose;TY3WE;5
+Lisa Spencer;Los Altos;ER4XC;20
+YXZ715:Keyboard:19.99:0:1
+George Washington;Washington DC;G3ORG3;5
+RT2870:Wireless Router:49.99:45:4
+Andrew Jackson;New Orleans;ANDR3W;6
+Martin Van Buren;New York City;BUR3N;4
+John Tyler;Seattle;TYL3R;5
+James K Polk;San Jose;KP0LK;10
+GTX780:Graphics Card:499.99:25:5
+Thomas Jefferson;Richmond;TH0MJ3;2
+James Madison;Sacramento;JAM3SM;3
+James Monroe;Salt Lake City;M0NR03;5
+John Quincy Adams;Chicago;QU1NCY;10
+William Henry Harrison;Fremont;H3NRY;5
