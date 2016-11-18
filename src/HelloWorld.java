@@ -13,12 +13,12 @@ public class HelloWorld {
 
 		boolean a = true;
 		boolean b = false;
-				
+
 		System.out.println(a && (b || !a));
 		System.out.println(a && b);
 
 		System.out.println(((a && (b || !a)) == a && b));
-		
+
 	}
 
 }

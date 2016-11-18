@@ -17,10 +17,10 @@ import java.io.*;
 /**
  * The purpose of this program is to implement a simple text based mortgage calculation program that
  * reads user input from the console and prints out the output calculations.
- * 
+ *
  * @version 1.2 9/25/15
  * @author William Yang
- * 
+ *
  */
 
 public class MortgageCalculation {
@@ -30,7 +30,7 @@ public class MortgageCalculation {
 	/**
 	 * Initializes several local variables and also modifies them by calling appropriate methods to
 	 * obtain user input as well as to calculate and display the output.
-	 * 
+	 *
 	 * @param args Unused parameter
 	 */
 	public static void main(String[] args) {
@@ -65,7 +65,7 @@ public class MortgageCalculation {
 
 	/**
 	 * Utilizes a try-catch block to initialize the property address field with the user input.
-	 * 
+	 *
 	 * @param prompt The String to display when prompting for user input
 	 * @return Tthe property address as a String
 	 */
@@ -86,13 +86,13 @@ public class MortgageCalculation {
 
 		} catch (IOException e) { e.printStackTrace (); }
 
-		return getPropertyAddress;				
+		return getPropertyAddress;
 	}
 
 	/**
 	 * Utilizes a try-catch block to initialize the double values with user input. Double values include
 	 * property value, interest rate, and down payment (as a %).
-	 * 
+	 *
 	 * @param prompt The String to display when prompting for user input
 	 * @return The user input for the particular prompt as a double
 	 */
@@ -118,7 +118,7 @@ public class MortgageCalculation {
 
 	/**
 	 * Utilizes a try-catch block to initialize the load duration value with user input.
-	 * 
+	 *
 	 * @param prompt The String to display when prompting for user input
 	 * @return The input for loan duration value as an int
 	 */
@@ -140,10 +140,10 @@ public class MortgageCalculation {
 
 		return getLoanDuration;
 	}
-	
+
 	/**
 	 * Calculates the loan amount.
-	 * 
+	 *
 	 * @param propertyValue The total property value
 	 * @param downPayment The percentage of the total property value that is paid initially paid as down payment
 	 * @return The loan amount as a double
@@ -161,7 +161,7 @@ public class MortgageCalculation {
 
 	/**
 	 * Calculates the monthly interest rate.
-	 * 
+	 *
 	 * @param interestRate The total annual interest rate as a percent
 	 * @return The monthly interest rate
 	 */
@@ -177,7 +177,7 @@ public class MortgageCalculation {
 
 	/**
 	 * Calculates the monthly payments.
-	 * 
+	 *
 	 * @param loanAmount The total loan amount
 	 * @param monthlyRate The monthly interest rate
 	 * @param loanDuration The total loan duration
@@ -196,7 +196,7 @@ public class MortgageCalculation {
 
 	/**
 	 * Calculates the total monthly payment including property tax.
-	 * 
+	 *
 	 * @param propertyValue The total property value
 	 * @param taxRate The annual tax rate
 	 * @return The monthly payments including property tax
@@ -213,7 +213,7 @@ public class MortgageCalculation {
 
 	/**
 	 * Calculates the total payment without property tax over the specified loan duration period.
-	 * 
+	 *
 	 * @param monthlyPayment The total monthly payment amounts, not including property tax
 	 * @param loanDuration The total duration of the loan, in years
 	 * @return The total payment over the loan duration
@@ -232,8 +232,8 @@ public class MortgageCalculation {
 	/**
 	 * Prints the output onto the console. Simulates a longer calculation time using Thread.sleep for
 	 * 2 seconds.
-	 * 
-	 * 
+	 *
+	 *
 	 * @param propertyAddress The property address
 	 * @param propertyValue The total property value
 	 * @param downPayment The initial down payment amount
@@ -242,7 +242,7 @@ public class MortgageCalculation {
 	 * @param propertyTaxPayment The monthly payments including property tax
 	 * @param totalPayment The total payment over the loan duration
 	 */
-	public static void displayOutput (String propertyAddress, double propertyValue, double downPayment, 
+	public static void displayOutput (String propertyAddress, double propertyValue, double downPayment,
 			double loanAmount, double monthlyPayment, double propertyTaxPayment, double totalPayment) {
 
 		System.out.println("\nMortgage calculator is processing data ... Please wait ...");

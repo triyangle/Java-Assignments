@@ -6,12 +6,12 @@ public class Midterm {
 		System.out.print(z);
 
 	}
-	
+
 	public static int average() {
-		
+
 		int x = 5;
 		int y = 10;
-		
+
 		return y/x;
 	}
 

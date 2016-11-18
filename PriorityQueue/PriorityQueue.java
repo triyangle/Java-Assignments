@@ -3,11 +3,11 @@ import java.util.*;
 
 public class PriorityQueue<T> {
    private ArrayList<QueueNode<T>> list;
-   
+
    public PriorityQueue() {
       list = new ArrayList<QueueNode<T>>();
    }
-   
+
    /**
     * Adds a new element of a specific priority to the end of the queue
     * @param element the specific element added
@@ -16,7 +16,7 @@ public class PriorityQueue<T> {
    public void add(T element, int priority) {
       list.add(new QueueNode<T>(element, priority));
    }
-   
+
    /**
     * Adds a new element with no priority to the end of the queue
     * @param element
@@ -24,7 +24,7 @@ public class PriorityQueue<T> {
    public void add(T element) {
       list.add(new QueueNode<T>(element));
    }
-   
+
    /**
     * Determines whether or not the queue is empty
     * @return if the queue is empty or not
@@ -32,7 +32,7 @@ public class PriorityQueue<T> {
    public boolean isEmpty() {
       return list.isEmpty();
    }
-   
+
    /**
     * Peeks at the next element in the queue with the highest priority,
     *  without removing that element from the queue
@@ -52,7 +52,7 @@ public class PriorityQueue<T> {
       }
       return e;
    }
-   
+
    /**
     * Polls the next element in the queue with the highest priority,
     *  removing that element from the queue
@@ -83,7 +83,7 @@ public class PriorityQueue<T> {
       }
       return e;
    }
-   
+
    /*
     * just some testing to see if this implementation works
     */
@@ -110,7 +110,7 @@ public class PriorityQueue<T> {
 class QueueNode<T> {
    private T element;
    private int priority;
-   
+
    /**
     * Creates a QueueNode of a specific element and priority
     * @param element
@@ -128,7 +128,7 @@ class QueueNode<T> {
       this.element = element;
       this.priority = 0;
    }
-   
+
    /**
     * Gets the element in this node
     * @return
@@ -136,7 +136,7 @@ class QueueNode<T> {
    public T getElement() {
       return element;
    }
-   
+
    /**
     * Sets the element in this node
     * @param element
@@ -144,7 +144,7 @@ class QueueNode<T> {
    public void setElement(T element) {
       this.element = element;
    }
-   
+
    /**
     * Gets the priority of this node
     * @return
@@ -152,7 +152,7 @@ class QueueNode<T> {
    public int getPriority() {
       return priority;
    }
-   
+
    /**
     * Sets the priority of this node
     * @param priority
@@ -160,7 +160,7 @@ class QueueNode<T> {
    public void setPriority(int priority) {
       this.priority = priority;
    }
-   
+
    public boolean equals(Object o) {
       if (!o.getClass().toString().equals("class QueueNode")) {
          return false;

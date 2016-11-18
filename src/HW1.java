@@ -3,13 +3,13 @@ import java.io.*;
 public class HW1 {
 
 	public static void main(String[] args) {
-		
+
 		String one = "";
 		String two = "";
 		String combo = "";
-		
+
 		 try {
-			 
+
 			String buffer = "";
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -22,17 +22,17 @@ public class HW1 {
 			two = buffer;
 
 			br.close();
-			
+
 		} catch (IOException e) { e.printStackTrace(); }
-		
+
 		if(one.compareTo(two) < 0) {
 			combo = one + two;
-		
-		} else { 
-			
+
+		} else {
+
 			combo = two + one;
 		}
-		
+
 		System.out.print(combo);
 
 	}

@@ -1,4 +1,4 @@
-/* 
+/*
  * AP(r) Computer Science GridWorld Case Study:
  * Copyright(c) 2005-2006 Cay S. Horstmann (http://horstmann.com)
  *
@@ -10,7 +10,7 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * @author Cay Horstmann
  */
 
@@ -32,8 +32,8 @@ public class BugRunner
 {
 	public static void main(String[] args)
 	{
-		
-		
+
+
 		Color purple = new Color(148, 0, 211);
 		ActorWorld world = new ActorWorld();
 		Bug redBug = new Bug();
@@ -82,30 +82,30 @@ public class BugRunner
 			}
 		}
 	}
-	
+
 	public static void colorBug(Bug bug) {
-		
+
 		bug.getLocation();
 		bug.setColor(new Color(148, 0, 211));
-		
+
 	}
-	
+
 	public static void makeBugs(ActorWorld world, int n) {
-		
+
 		for(int i = 0; i < n; i++) {
-			
+
 			Bug coloredBug = new Bug();
-			
+
 			world.add(coloredBug);
-			
+
 			int x = coloredBug.getLocation().getCol();
 			int y = coloredBug.getLocation().getRow();
-			
+
 			coloredBug.setColor(new Color(25 * y, 0, 25 * x));
-			
-			
-			
+
+
+
 		}
-		
+
 	}
 }

@@ -24,7 +24,7 @@ public class FruitMachine {
 		while (stillPlaying)  {
 
 			String [] choices = {"Play", "Deposit", "Quit (cash out)"};
-			
+
 			//displays main gui
 
 			String buffer = (String)JOptionPane.showInputDialog(null, "              Welcome to FRUIT MACHINE\n\nYour credit: " + credit + "\nPlease select your option:", "Fruit Machine", JOptionPane.PLAIN_MESSAGE, null, choices, choices[0]);
@@ -45,7 +45,7 @@ public class FruitMachine {
 			if(buffer == "Quit (cash out)") {
 
 				option = 3;
-				
+
 			} else {
 
 			if(buffer == null) {
@@ -64,11 +64,11 @@ public class FruitMachine {
 					 break;
 			case 2:  credit += handleDeposit(credit);
 					 break;
-			case 3: 
+			case 3:
 			case 4:  stillPlaying = handleQuit(credit, stillPlaying);
 					 break;
 			default: break;
-			
+
 			}
 		}
 
@@ -82,26 +82,26 @@ public class FruitMachine {
 
 		//displays an input dialog to get the deposit amount
 		buffer = JOptionPane.showInputDialog(null, "Enter a deposit in $:", "Fruit Machine", JOptionPane.INFORMATION_MESSAGE);
-		
+
 		//if user clicks cancel or doesn't enter anything, returns 0 for deposit amount
 		if(buffer == null || buffer.equals("")) {
-			
+
 			return 0;
-			
+
 		}
-		
+
 		//if user doesn't enter anything, returns 0 for deposit amount
 		/*switch(buffer) {
 			case "": return 0;
 		}
 		*/
-		
+
 		getNewDeposit = Integer.parseInt(buffer);
-		
+
 		newCredits = getNewDeposit*4;
 		return newCredits;
 	}
-	
+
 
 	public static int handlePlay(int credit) {
 
@@ -125,14 +125,14 @@ public class FruitMachine {
 
 			//gets the symbols for the combination
 			while(letternumber < 3) {
-				
+
 				String symbol = "";
-				
+
 				int randomValue = (int)(Math.random()*5);
-				
+
 				//switch statement and nested if-else statement do the same thing
 				switch(randomValue) {
-				
+
 				case 0: symbol = "A";
 				        break;
 				case 1: symbol = "D";
@@ -143,29 +143,29 @@ public class FruitMachine {
 						break;
 				case 4: symbol = "V";
 						break;
-				
+
 				}
 				/*
 				if(randomValue == 0) {
 					symbol = "A";
-					
+
 				} else {
 
 				if(randomValue == 1) {
 					symbol = "D";
-					
+
 				} else {
 
 				if(randomValue == 2) {
 					symbol = "J";
-					
+
 				} else {
 
 				if(randomValue == 3) {
 					symbol = "O";
-								
+
 				} else {
-					
+
 				if(randomValue == 4) {
 					symbol = "V";
 				}
@@ -182,7 +182,7 @@ public class FruitMachine {
 			//displays a message for each case of winning
 			//sends a message for losing as default case
 			switch(result) {
-			
+
 			case "OOD": winCredits += 10000;
 						JOptionPane.showMessageDialog(null, "Congratulaions the winning combination " + result + " was generated. You have won 10000 credits.", "Fruit Machine", JOptionPane.INFORMATION_MESSAGE);
 						break;
@@ -190,9 +190,9 @@ public class FruitMachine {
 						JOptionPane.showMessageDialog(null, "Congratulations the winning combination " + result + " was generated. You have won 5000 credits.", "Fruit Machine", JOptionPane.INFORMATION_MESSAGE);
 						break;
 			case "AAA":
-			case "DDD": 
+			case "DDD":
 			case "JJJ":
-			case "OOO": 
+			case "OOO":
 			case "VVV": winCredits += 200;
 						JOptionPane.showMessageDialog(null, "Congratulations the winning combination " + result + " was generated. You have won 200 credits.", "Fruit Machine", JOptionPane.INFORMATION_MESSAGE);
 						break;
@@ -216,12 +216,12 @@ public class FruitMachine {
 						JOptionPane.showMessageDialog(null, "Congratulations the winning combination " + result + " was generated. You have won 50 credits.", "Fruit Machine", JOptionPane.INFORMATION_MESSAGE);
 						break;
 			default:    JOptionPane.showMessageDialog(null, "Sorry, the combination " + result + " is not a winning combination. You have not won any credits.", "Fruit Machine", JOptionPane.INFORMATION_MESSAGE);
-			
+
 			}
 		}
-		
+
 		return winCredits;
-		
+
 	}
 
 	public static boolean handleQuit(int credit, boolean stillPlaying) {
